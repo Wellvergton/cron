@@ -7,8 +7,8 @@ $cron-theme: mat-light-theme($cron-primary, $cron-accent);
 
 @include angular-material-theme($cron-theme);
 
-$dark-primary: mat-palette($mat-light-green, A400);
-$dark-accent: mat-palette($mat-purple, A400);
+$dark-primary: mat-palette($mat-green, A200);
+$dark-accent: mat-palette($mat-purple, 500);
 $dark-theme: mat-dark-theme($dark-primary, $dark-accent);
 
 .cron-dark-theme {

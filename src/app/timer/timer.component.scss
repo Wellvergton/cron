@@ -4,10 +4,23 @@ mat-card {
 
 input::selection {
   background-color: white;
-  color: #00be00;
+  color: #1b5e20;
 }
 
 p {
-  font-size: 4rem;
+  font-size: 3rem;
+  line-height: normal;
   user-select: none;
+}
+
+mat-card-actions {
+  margin-left: 0;
+}
+
+mat-card > mat-card-actions:last-child {
+  margin-bottom: 0;
+}
+
+mat-card-actions button:first-child {
+  margin-right: 8px;
 }
