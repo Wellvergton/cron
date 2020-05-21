@@ -1,0 +1,28 @@
+<mat-card>
+  <mat-card-title>
+    <mat-form-field>
+      <input matInput type="text" [(ngModel)]="title">
+    </mat-form-field>
+  </mat-card-title>
+  <mat-card-content>
+    <p>
+      {{ time.minutes | alwaysTwoDigits }}:{{ time.seconds | alwaysTwoDigits }}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button
+      mat-icon-button
+      color="primary"
+      (click)="!timeIsRunning ? start() : pause()"
+    >
+      <mat-icon *ngIf="!timeIsRunning">play_arrow</mat-icon>
+      <mat-icon *ngIf="timeIsRunning">pause</mat-icon>
+    </button>
+    <button mat-icon-button color="primary" (click)="stop()">
+      <mat-icon>stop</mat-icon>
+    </button>
+    <button mat-icon-button color="primary" (click)="delete()">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>

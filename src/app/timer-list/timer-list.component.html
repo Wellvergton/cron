@@ -1,0 +1,14 @@
+<div>
+  <app-timer
+    *ngFor="let timer of timers"
+    [id]="timer.id"
+    [title]="timer.title"
+    [time]="timer.time"
+    (deleted)="deleteTimer($event)"
+  >
+  </app-timer>
+
+  <button mat-fab (click)="addTimer()">
+    <mat-icon>add</mat-icon>
+  </button>
+</div>

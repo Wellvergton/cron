@@ -1,0 +1,13 @@
+mat-card {
+  margin-bottom: 3%;
+}
+
+input::selection {
+  background-color: white;
+  color: #00be00;
+}
+
+p {
+  font-size: 4rem;
+  user-select: none;
+}
