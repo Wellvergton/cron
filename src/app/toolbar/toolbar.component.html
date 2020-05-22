@@ -1,0 +1,6 @@
+<mat-toolbar color="primary">
+  <mat-slide-toggle (click)="toggleTheme()">
+    <mat-icon *ngIf="!isDark">brightness_2</mat-icon>
+    <mat-icon *ngIf="isDark">wb_sunny</mat-icon>
+  </mat-slide-toggle>
+</mat-toolbar>
