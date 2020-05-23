@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "cron",
+      "public": "dist/cron",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}

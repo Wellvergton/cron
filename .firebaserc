@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "cron-24de7": {
+      "hosting": {
+        "cron": [
+          "cron-24de7"
+        ]
+      }
+    }
+  }
+}
