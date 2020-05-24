@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
-interface Timer {
+type Timer = {
   id: number;
   title: string;
   time: { minutes: number, seconds: number };
-}
+};
 
 @Component({
   selector: 'app-timer-list',
