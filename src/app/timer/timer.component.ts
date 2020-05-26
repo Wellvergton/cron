@@ -2,6 +2,8 @@ import {
   Component, OnInit, OnDestroy, Input, Output, EventEmitter
 } from '@angular/core';
 
+type NewTitleInfo = { id: number, title: string };
+
 @Component({
   selector: 'app-timer',
   templateUrl: './timer.component.html',
@@ -14,6 +16,7 @@ export class TimerComponent implements OnInit, OnDestroy {
   @Input() id: number;
   @Input() title: string;
   @Input() time: { minutes: number, seconds: number };
+  @Output() titleChange = new EventEmitter<NewTitleInfo>();
   @Output() deleted = new EventEmitter<number>();
   timeIsRunning = false;
   interval: any;
@@ -46,6 +49,10 @@ export class TimerComponent implements OnInit, OnDestroy {
 
   delete(): void {
     this.deleted.emit(this.id);
+  }
+
+  saveNewTitle(): void {
+    this.titleChange.emit({id: this.id, title: this.title});
   }
 
   ngOnInit(): void {

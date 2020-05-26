@@ -5,6 +5,7 @@
     [title]="timer.title"
     [time]="timer.time"
     (deleted)="deleteTimer($event)"
+    (titleChange)="updateTimer($event.id, $event.title)"
   >
   </app-timer>
 
