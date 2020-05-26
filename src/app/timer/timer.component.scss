@@ -24,3 +24,18 @@ mat-card > mat-card-actions:last-child {
 mat-card-actions button:first-child {
   margin-right: 8px;
 }
+
+@media (min-width: 600px) {
+  mat-card {
+    width: 40%;
+    margin: 0 2% 3%;
+    display: inline-block;
+  }
+}
+
+@media (min-width: 1200px) {
+  mat-card {
+    width: 20%;
+    display: inline-block;
+  }
+}
