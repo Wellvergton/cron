@@ -9,15 +9,20 @@ export class ToolbarComponent implements OnInit {
 
   constructor() { }
 
-  isDark = true;
+  isLightTheme = false;
   body = document.querySelector('body');
 
   ngOnInit(): void {
+    const storedThemePreference = JSON.parse(localStorage.isLightTheme);
+    if (storedThemePreference === true) {
+      this.toggleTheme();
+      this.isLightTheme = storedThemePreference;
+    }
   }
 
   toggleTheme(): void {
-    this.isDark = !this.isDark;
     this.body.classList.toggle('cron-dark-theme');
+    setTimeout(() => localStorage.isLightTheme = this.isLightTheme, 0);
   }
 
 }
